@@ -1,6 +1,6 @@
 public class MathEx {
     public static int swap(int z){
-        int result = z%10*10+z%100/10+z/100*100;
+        int result = (z%10*10)+(z%100/10)+(z/100*100);
         return result;
     }
 
@@ -14,6 +14,8 @@ public class MathEx {
         timeLeft(3,19,5,20);
         timeLeft(5,27,9,10);
         dayOfWeek(0,21);
+        System.out.println(dayOfWeek(0,1));
+        System.out.println(dayOfWeek(4,3));
     }
     public static void timeLeft(int curHour,int curMin, int depHour, int depMin){
         int answer = ((depHour*60+depMin)-(curHour*60+curMin))/60;
@@ -21,8 +23,8 @@ public class MathEx {
         System.out.println(answer + " hours " + result2 + " minutes");
 
     }
-      public static void dayOfWeek(int dayMonthStarts, int day){
-        int answer2 = (dayMonthStarts+1+day)%7;
-        System.out.println(answer2);
+      public static int dayOfWeek(int dayMonthStarts, int day){
+        int answer2 = (dayMonthStarts-1+day)%7;
+        return answer2;
     }
 }
