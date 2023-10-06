@@ -5,7 +5,7 @@ public class Random {
 
         x=Math.random()*20;
         System.out.println(x);
-        int a = (int)(Math.random()*51)+1
+        int a = (int)(Math.random()*51)+1;
         System.out.println(a);
     }
     
