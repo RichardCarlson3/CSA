@@ -25,6 +25,16 @@ public class Conditionals {
         if ((vaca==false)&&((day-3)*(day-3)!=9)) return seven;
         else return ten;
     }
+    public boolean onesDigitSame(int m, int n, int o){
+        if((m%10==n%10)||(n%10==o%10)||(o%10==m%10))return true;
+        else return false;
+    }
+    public int blackjack(int q, int r){
+        if((q>21)&&(r>21))return 0;
+        if((q<=21)&&(r<=21)&&(q>r))return q;
+        if((q<=21)&&(r>21))return q;
+        else return r;
+    }
 
     public static void main(String [] args){
         Conditionals c = new Conditionals();
@@ -55,6 +65,21 @@ public class Conditionals {
         System.out.println(c.setAlarm(2,true));
         System.out.println(c.setAlarm(4,true));
         System.out.println(c.setAlarm(6,true));
+        System.out.println();
+        System.out.println(c.onesDigitSame(23,19,13));
+        System.out.println(c.onesDigitSame (23, 19, 12));
+        System.out.println(c.onesDigitSame (23, 19, 3));
+        System.out.println(c.onesDigitSame (423, 13, 3));
+        System.out.println(c.onesDigitSame (23, 29, 25));
+        System.out.println();
+        System.out.println(c.blackjack(19, 21));
+        System.out.println(c.blackjack(21, 19));
+        System.out.println(c.blackjack(19, 22));
+        System.out.println(c.blackjack(8, 8));
+        System.out.println(c.blackjack(25, 24));
+        System.out.println(c.blackjack(17, 9));
+        System.out.println(c.blackjack(12, 18));
+
 
     }
 }
